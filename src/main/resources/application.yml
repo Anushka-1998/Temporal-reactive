@@ -1,0 +1,12 @@
+spring:
+  profiles:
+    active: local
+restClient:
+   routeService: http://localhost:8084/possibleRoute
+
+server:
+  port: 8082
+
+logging:
+  level:
+    root: info
