@@ -10,10 +10,8 @@ import com.clone.workflow.temporal.workflow.ShippingWorkflowImpl;
 
 import io.temporal.worker.Worker;
 import io.temporal.worker.WorkerFactory;
-import reactivefeign.spring.config.EnableReactiveFeignClients;
 
 @SpringBootApplication
-@EnableReactiveFeignClients
 public class ShippingApplication {
 
 	public static void main(String[] args) {

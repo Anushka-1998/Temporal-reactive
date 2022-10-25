@@ -27,12 +27,11 @@ public class ShippingService {
 
 	public Mono<ProductDetails> getProductDetails(Od3cpRequestInfo requestInfo) throws ExecutionException, InterruptedException {
 		ShippingWorkFlow workflow = createWorkFlowConnection(requestInfo.getRequestId());
-		CompletableFuture<Mono<ProductDetails>> productDetails = WorkflowClient.execute(workflow::getProductWorkflow,requestInfo);
-		return productDetails.get();
-		/*WorkflowExecution productDetails = WorkflowClient.start(workflow::getProductWorkflow,requestInfo);
-
+	//	CompletableFuture<Mono<ProductDetails>> productDetails = WorkflowClient.execute(workflow::getProductWorkflow,requestInfo);
+		//return productDetails.get();
+		WorkflowExecution productDetails = WorkflowClient.start(workflow::getProductWorkflow,requestInfo);
 		return workflow.getProductWorkflow(requestInfo);
-*/
+
 	}
 
 
